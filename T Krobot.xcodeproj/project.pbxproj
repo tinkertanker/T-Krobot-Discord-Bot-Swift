@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		32445A0429C55C4600E2F584 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32445A0329C55C4600E2F584 /* main.swift */; };
+		32445A1129C55F2200E2F584 /* DiscordBM in Frameworks */ = {isa = PBXBuildFile; productRef = 32445A1029C55F2200E2F584 /* DiscordBM */; };
+		32445A1329C55F2200E2F584 /* DiscordLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 32445A1229C55F2200E2F584 /* DiscordLogger */; };
+		326FAF2429C5ACE100D95306 /* LinkShortener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF2329C5ACE100D95306 /* LinkShortener.swift */; };
+		326FAF2729C5B2A800D95306 /* ShortLinkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF2629C5B2A800D95306 /* ShortLinkResult.swift */; };
+		326FAF2929C5B48900D95306 /* SlashCommandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF2829C5B48900D95306 /* SlashCommandable.swift */; };
+		326FAF2B29C6E2FF00D95306 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF2A29C6E2FF00D95306 /* Keys.swift */; };
+		326FAF2D29C6E38C00D95306 /* Keys+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF2C29C6E38C00D95306 /* Keys+Constants.swift */; };
+		326FAF3029C6E3DA00D95306 /* ClassCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF2F29C6E3DA00D95306 /* ClassCreator.swift */; };
+		326FAF3329C6E9DB00D95306 /* DiscordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF3229C6E9DB00D95306 /* DiscordManager.swift */; };
+		326FAF3529C6EA2200D95306 /* DiscordManager+SlashCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF3429C6EA2200D95306 /* DiscordManager+SlashCommands.swift */; };
+		326FAF3729C6EA9500D95306 /* DiscordManager+EventHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF3629C6EA9500D95306 /* DiscordManager+EventHandling.swift */; };
+		326FAF3B29C6EB9100D95306 /* LinkShortener+SlashCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF3A29C6EB9100D95306 /* LinkShortener+SlashCommand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +37,16 @@
 /* Begin PBXFileReference section */
 		32445A0029C55C4600E2F584 /* T Krobot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "T Krobot"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32445A0329C55C4600E2F584 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		326FAF2329C5ACE100D95306 /* LinkShortener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkShortener.swift; sourceTree = "<group>"; };
+		326FAF2629C5B2A800D95306 /* ShortLinkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkResult.swift; sourceTree = "<group>"; };
+		326FAF2829C5B48900D95306 /* SlashCommandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlashCommandable.swift; sourceTree = "<group>"; };
+		326FAF2A29C6E2FF00D95306 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		326FAF2C29C6E38C00D95306 /* Keys+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Keys+Constants.swift"; sourceTree = "<group>"; };
+		326FAF2F29C6E3DA00D95306 /* ClassCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCreator.swift; sourceTree = "<group>"; };
+		326FAF3229C6E9DB00D95306 /* DiscordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscordManager.swift; sourceTree = "<group>"; };
+		326FAF3429C6EA2200D95306 /* DiscordManager+SlashCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscordManager+SlashCommands.swift"; sourceTree = "<group>"; };
+		326FAF3629C6EA9500D95306 /* DiscordManager+EventHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscordManager+EventHandling.swift"; sourceTree = "<group>"; };
+		326FAF3A29C6EB9100D95306 /* LinkShortener+SlashCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LinkShortener+SlashCommand.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32445A1129C55F2200E2F584 /* DiscordBM in Frameworks */,
+				32445A1329C55F2200E2F584 /* DiscordLogger in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +82,58 @@
 			isa = PBXGroup;
 			children = (
 				32445A0329C55C4600E2F584 /* main.swift */,
+				326FAF3929C6EB3100D95306 /* Discord Manager */,
+				326FAF3829C6EB2A00D95306 /* Credentials */,
+				326FAF3129C6E94D00D95306 /* Slash Command */,
 			);
 			path = "T Krobot";
+			sourceTree = "<group>";
+		};
+		326FAF2529C5B29600D95306 /* Link Shortener */ = {
+			isa = PBXGroup;
+			children = (
+				326FAF2329C5ACE100D95306 /* LinkShortener.swift */,
+				326FAF3A29C6EB9100D95306 /* LinkShortener+SlashCommand.swift */,
+				326FAF2629C5B2A800D95306 /* ShortLinkResult.swift */,
+			);
+			path = "Link Shortener";
+			sourceTree = "<group>";
+		};
+		326FAF2E29C6E3C800D95306 /* Class Creator */ = {
+			isa = PBXGroup;
+			children = (
+				326FAF2F29C6E3DA00D95306 /* ClassCreator.swift */,
+			);
+			path = "Class Creator";
+			sourceTree = "<group>";
+		};
+		326FAF3129C6E94D00D95306 /* Slash Command */ = {
+			isa = PBXGroup;
+			children = (
+				326FAF2829C5B48900D95306 /* SlashCommandable.swift */,
+				326FAF2E29C6E3C800D95306 /* Class Creator */,
+				326FAF2529C5B29600D95306 /* Link Shortener */,
+			);
+			path = "Slash Command";
+			sourceTree = "<group>";
+		};
+		326FAF3829C6EB2A00D95306 /* Credentials */ = {
+			isa = PBXGroup;
+			children = (
+				326FAF2A29C6E2FF00D95306 /* Keys.swift */,
+				326FAF2C29C6E38C00D95306 /* Keys+Constants.swift */,
+			);
+			path = Credentials;
+			sourceTree = "<group>";
+		};
+		326FAF3929C6EB3100D95306 /* Discord Manager */ = {
+			isa = PBXGroup;
+			children = (
+				326FAF3229C6E9DB00D95306 /* DiscordManager.swift */,
+				326FAF3629C6EA9500D95306 /* DiscordManager+EventHandling.swift */,
+				326FAF3429C6EA2200D95306 /* DiscordManager+SlashCommands.swift */,
+			);
+			path = "Discord Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +152,10 @@
 			dependencies = (
 			);
 			name = "T Krobot";
+			packageProductDependencies = (
+				32445A1029C55F2200E2F584 /* DiscordBM */,
+				32445A1229C55F2200E2F584 /* DiscordLogger */,
+			);
 			productName = "T Krobot";
 			productReference = 32445A0029C55C4600E2F584 /* T Krobot */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +184,9 @@
 				Base,
 			);
 			mainGroup = 324459F729C55C4600E2F584;
+			packageReferences = (
+				32445A0F29C55F2200E2F584 /* XCRemoteSwiftPackageReference "DiscordBM" */,
+			);
 			productRefGroup = 32445A0129C55C4600E2F584 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -120,7 +201,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				326FAF2429C5ACE100D95306 /* LinkShortener.swift in Sources */,
 				32445A0429C55C4600E2F584 /* main.swift in Sources */,
+				326FAF3329C6E9DB00D95306 /* DiscordManager.swift in Sources */,
+				326FAF3B29C6EB9100D95306 /* LinkShortener+SlashCommand.swift in Sources */,
+				326FAF3529C6EA2200D95306 /* DiscordManager+SlashCommands.swift in Sources */,
+				326FAF2729C5B2A800D95306 /* ShortLinkResult.swift in Sources */,
+				326FAF2D29C6E38C00D95306 /* Keys+Constants.swift in Sources */,
+				326FAF3029C6E3DA00D95306 /* ClassCreator.swift in Sources */,
+				326FAF2929C5B48900D95306 /* SlashCommandable.swift in Sources */,
+				326FAF3729C6EA9500D95306 /* DiscordManager+EventHandling.swift in Sources */,
+				326FAF2B29C6E2FF00D95306 /* Keys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +375,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		32445A0F29C55F2200E2F584 /* XCRemoteSwiftPackageReference "DiscordBM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MahdiBM/DiscordBM";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		32445A1029C55F2200E2F584 /* DiscordBM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32445A0F29C55F2200E2F584 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordBM;
+		};
+		32445A1229C55F2200E2F584 /* DiscordLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 32445A0F29C55F2200E2F584 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordLogger;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 324459F829C55C4600E2F584 /* Project object */;
 }
