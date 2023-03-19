@@ -20,6 +20,10 @@
 		326FAF3529C6EA2200D95306 /* DiscordManager+SlashCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF3429C6EA2200D95306 /* DiscordManager+SlashCommands.swift */; };
 		326FAF3729C6EA9500D95306 /* DiscordManager+EventHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF3629C6EA9500D95306 /* DiscordManager+EventHandling.swift */; };
 		326FAF3B29C6EB9100D95306 /* LinkShortener+SlashCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF3A29C6EB9100D95306 /* LinkShortener+SlashCommand.swift */; };
+		326FAF3D29C6F5AB00D95306 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF3C29C6F5AB00D95306 /* PersistenceManager.swift */; };
+		326FAF4029C6F71100D95306 /* ClassCreator+Notion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF3F29C6F71100D95306 /* ClassCreator+Notion.swift */; };
+		326FAF4229C7217300D95306 /* DiscordManager+Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF4129C7217300D95306 /* DiscordManager+Verification.swift */; };
+		326FAF4429C7219A00D95306 /* DiscordManager+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF4329C7219A00D95306 /* DiscordManager+Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +51,10 @@
 		326FAF3429C6EA2200D95306 /* DiscordManager+SlashCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscordManager+SlashCommands.swift"; sourceTree = "<group>"; };
 		326FAF3629C6EA9500D95306 /* DiscordManager+EventHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscordManager+EventHandling.swift"; sourceTree = "<group>"; };
 		326FAF3A29C6EB9100D95306 /* LinkShortener+SlashCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LinkShortener+SlashCommand.swift"; sourceTree = "<group>"; };
+		326FAF3C29C6F5AB00D95306 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		326FAF3F29C6F71100D95306 /* ClassCreator+Notion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClassCreator+Notion.swift"; sourceTree = "<group>"; };
+		326FAF4129C7217300D95306 /* DiscordManager+Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscordManager+Verification.swift"; sourceTree = "<group>"; };
+		326FAF4329C7219A00D95306 /* DiscordManager+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscordManager+Constants.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				32445A0329C55C4600E2F584 /* main.swift */,
+				326FAF3E29C6F66D00D95306 /* Persistence Manager */,
 				326FAF3929C6EB3100D95306 /* Discord Manager */,
 				326FAF3829C6EB2A00D95306 /* Credentials */,
 				326FAF3129C6E94D00D95306 /* Slash Command */,
@@ -103,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				326FAF2F29C6E3DA00D95306 /* ClassCreator.swift */,
+				326FAF3F29C6F71100D95306 /* ClassCreator+Notion.swift */,
 			);
 			path = "Class Creator";
 			sourceTree = "<group>";
@@ -132,8 +142,18 @@
 				326FAF3229C6E9DB00D95306 /* DiscordManager.swift */,
 				326FAF3629C6EA9500D95306 /* DiscordManager+EventHandling.swift */,
 				326FAF3429C6EA2200D95306 /* DiscordManager+SlashCommands.swift */,
+				326FAF4329C7219A00D95306 /* DiscordManager+Constants.swift */,
+				326FAF4129C7217300D95306 /* DiscordManager+Verification.swift */,
 			);
 			path = "Discord Manager";
+			sourceTree = "<group>";
+		};
+		326FAF3E29C6F66D00D95306 /* Persistence Manager */ = {
+			isa = PBXGroup;
+			children = (
+				326FAF3C29C6F5AB00D95306 /* PersistenceManager.swift */,
+			);
+			path = "Persistence Manager";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,14 +224,18 @@
 				326FAF2429C5ACE100D95306 /* LinkShortener.swift in Sources */,
 				32445A0429C55C4600E2F584 /* main.swift in Sources */,
 				326FAF3329C6E9DB00D95306 /* DiscordManager.swift in Sources */,
+				326FAF3D29C6F5AB00D95306 /* PersistenceManager.swift in Sources */,
+				326FAF4429C7219A00D95306 /* DiscordManager+Constants.swift in Sources */,
 				326FAF3B29C6EB9100D95306 /* LinkShortener+SlashCommand.swift in Sources */,
 				326FAF3529C6EA2200D95306 /* DiscordManager+SlashCommands.swift in Sources */,
 				326FAF2729C5B2A800D95306 /* ShortLinkResult.swift in Sources */,
 				326FAF2D29C6E38C00D95306 /* Keys+Constants.swift in Sources */,
 				326FAF3029C6E3DA00D95306 /* ClassCreator.swift in Sources */,
+				326FAF4229C7217300D95306 /* DiscordManager+Verification.swift in Sources */,
 				326FAF2929C5B48900D95306 /* SlashCommandable.swift in Sources */,
 				326FAF3729C6EA9500D95306 /* DiscordManager+EventHandling.swift in Sources */,
 				326FAF2B29C6E2FF00D95306 /* Keys.swift in Sources */,
+				326FAF4029C6F71100D95306 /* ClassCreator+Notion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

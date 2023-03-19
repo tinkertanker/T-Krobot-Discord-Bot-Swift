@@ -23,6 +23,7 @@ class ClassCreator: SlashCommandable {
     
     func handleInteraction(_ interaction: DiscordModels.Interaction) async throws {
         
+//        let notionPage = try await createNotionPage(name: <#String#>, discordInfo: <#String#>)
     }
     
     required init(bot: GatewayManager) {

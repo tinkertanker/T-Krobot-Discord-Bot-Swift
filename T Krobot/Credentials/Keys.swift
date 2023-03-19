@@ -11,4 +11,5 @@ struct Keys {
     let discordAppID: String
     let discordToken: String
     let shortIo: String
+    let notionKey: String
 }
