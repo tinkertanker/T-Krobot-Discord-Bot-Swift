@@ -11,7 +11,7 @@ import DiscordBM
 extension DiscordManager {
     func configureCommands() async {
         for manager in slashCommandManagers {
-            let slashCommand = manager.createSlashCommand()
+            let slashCommand = manager.slashCommand
             
             _ = try? await bot.client.createGlobalApplicationCommand(payload: slashCommand)
         }
@@ -20,7 +20,7 @@ extension DiscordManager {
     func handleIncomingSlashCommand(_ command: Interaction.ApplicationCommand,
                                     interaction: Interaction) {
         Task {
-            if let targetManager = slashCommandManagers.first(where: { $0.command == command.name }) {
+            if let targetManager = slashCommandManagers.first(where: { $0.name == command.name }) {
                 try await targetManager.handleInteraction(interaction)
             }
         }

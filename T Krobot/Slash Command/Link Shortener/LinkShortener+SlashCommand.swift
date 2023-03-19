@@ -9,15 +9,15 @@ import Foundation
 import DiscordBM
 
 extension LinkShortener {
-    func createSlashCommand() -> RequestBody.ApplicationCommandCreate {
-        RequestBody.ApplicationCommandCreate(name: command,
-                                             description: "Create tk.sg links.",
-                                             options: [
-                                                .init(type: .string, name: "suffix", description: "tk.sg/what?", required: true, min_length: 1, max_length: 100, autocomplete: false),
-                                                .init(type: .string, name: "link", description: "Long link", required: true, min_length: 1, max_length: 1000, autocomplete: false)
-                                             ],
-                                             default_member_permissions: [.administrator],
-                                             type: .chatInput)
+    var slashCommand: RequestBody.ApplicationCommandCreate {
+        .init(name: "shorten",
+              description: "Create tk.sg links.",
+              options: [
+                .init(type: .string, name: "suffix", description: "tk.sg/what?", required: true, min_length: 1, max_length: 100, autocomplete: false),
+                .init(type: .string, name: "link", description: "Long link", required: true, min_length: 1, max_length: 1000, autocomplete: false)
+              ],
+              default_member_permissions: [.administrator],
+              type: .chatInput)
     }
     
     func handleInteraction(_ interaction: Interaction) async throws {

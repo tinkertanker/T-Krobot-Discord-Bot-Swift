@@ -9,8 +9,6 @@ import Foundation
 import DiscordBM
 
 class LinkShortener: SlashCommandable {
-    let command = "shorten"
-    
     var bot: GatewayManager
     
     required init(bot: GatewayManager) {

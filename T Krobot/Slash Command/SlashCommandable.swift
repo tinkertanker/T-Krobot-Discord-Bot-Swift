@@ -9,11 +9,18 @@ import Foundation
 import DiscordBM
 
 protocol SlashCommandable {
-    var command: String { get }
+    var name: String { get }
+    
+    var slashCommand: RequestBody.ApplicationCommandCreate { get }
     var bot: GatewayManager { get set }
     
     func handleInteraction(_ interaction: Interaction) async throws
-    func createSlashCommand() -> RequestBody.ApplicationCommandCreate
     
     init(bot: GatewayManager)
+}
+
+extension SlashCommandable {
+    var name: String {
+        slashCommand.name
+    }
 }
