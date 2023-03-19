@@ -33,5 +33,4 @@ extension DiscordManager {
         
         static let guildId = "1055369990435516447"
     }
-
 }

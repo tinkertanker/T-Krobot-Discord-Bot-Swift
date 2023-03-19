@@ -35,21 +35,33 @@ extension DiscordManager {
     
     func handleNewMember(member: Gateway.GuildMemberAdd) {
         Task {
-            try await bot.client.createMessage(channelId: Constant.Channel.verifications,
-                                               payload: .init(content: "<@&\(Constant.Role.verifiers)>",
-                                                              embeds: [Embed(title: "Someone Joined", description: "<@\(member.user.id)> just joined the server. If you recognise the user as a trainer, select **verify** and they will be let in.")], components: [
-                                                                .init(components: [
-                                                                    .button(.init(style: .primary, label: "Verify", custom_id: "verify.\(member.user.id)"))
-                                                                ])
-                                                              ]))
+            let message = "<@\(member.user.id)> just joined the server. If you recognise the user as a trainer, select **verify** and they will be let in."
+            _ = try await bot.client.createMessage(channelId: Constant.Channel.verifications,
+                                                   payload: .init(content: "<@&\(Constant.Role.verifiers)>",
+                                                                  embeds: [
+                                                                    Embed(title: "Someone Joined",
+                                                                          description: message)
+                                                                  ],
+                                                                  components: [
+                                                                    .init(components: [
+                                                                        .button(.init(style: .primary, label: "Verify", custom_id: "verify.\(member.user.id)"))
+                                                                    ])
+                                                                  ]))
         }
     }
     
     func sendWelcomeMesssage() async throws {
+        
+        let welcomeMessage = """
+Welcome to the TKTrainers Discord Server!
+
+This is the waiting room. Someone from the team will verify you soon.
+"""
+        
         _ = try await bot.client.createMessage(channelId: Constant.Channel.holdingRoom,
                                                payload: .init(content: Constant.Emoji.tcLockup))
         _ = try await bot.client.createMessage(channelId: Constant.Channel.holdingRoom,
-                                               payload: .init(content: "Welcome to the TKTrainers Discord Server!\n\nThis is the waiting room. Someone from the team will verify you soon."))
+                                               payload: .init(content: welcomeMessage))
     }
     
 }

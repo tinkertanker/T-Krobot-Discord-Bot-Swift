@@ -1,0 +1,12 @@
+line_length:
+  ignores_interpolated_strings: true
+
+disabled_rules:
+- trailing_whitespace
+- nesting
+
+identifier_name:
+  excluded:
+    - x
+    - y
+    - id

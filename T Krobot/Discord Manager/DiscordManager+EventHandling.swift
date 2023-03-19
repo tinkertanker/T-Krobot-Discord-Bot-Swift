@@ -21,7 +21,7 @@ extension DiscordManager {
                 case .messageComponent(let component):
                     handleIncomingMessageComponent(component,
                                                    interaction: interaction)
-                case .modalSubmit(_):
+                case .modalSubmit:
                     break
                 }
             case .guildMemberAdd(let newMember):
@@ -44,4 +44,3 @@ extension DiscordManager {
         }
     }
 }
-

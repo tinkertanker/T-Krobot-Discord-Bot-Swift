@@ -13,8 +13,21 @@ extension LinkShortener {
         .init(name: "shorten",
               description: "Create tk.sg links.",
               options: [
-                .init(type: .string, name: "suffix", description: "tk.sg/what?", required: true, min_length: 1, max_length: 100, autocomplete: false),
-                .init(type: .string, name: "link", description: "Long link", required: true, min_length: 1, max_length: 1000, autocomplete: false)
+                .init(type: .string,
+                      name: "suffix",
+                      description: "tk.sg/what?",
+                      required: true,
+                      min_length: 1,
+                      max_length: 100,
+                      autocomplete: false),
+                .init(type: .string,
+                      name: "link",
+                      description:
+                        "Long link",
+                      required: true,
+                      min_length: 1,
+                      max_length: 1000,
+                      autocomplete: false)
               ],
               default_member_permissions: [.administrator],
               type: .chatInput)
@@ -23,7 +36,7 @@ extension LinkShortener {
     func handleInteraction(_ interaction: Interaction) async throws {
         var shortLinkResult: ShortLinkResult?
         
-        switch (interaction.data) {
+        switch interaction.data {
         case .applicationCommand(let data):
             guard let options = data.options,
                   options.count == 2,
@@ -34,16 +47,14 @@ extension LinkShortener {
         default: break
         }
         
+        var message = "Could not shorten link 😔"
+        
         if let shortLinkResult {
-            _ = try await bot.client.createInteractionResponse(id: interaction.id,
-                                                               token: interaction.token,
-                                                               payload: .init(type: .channelMessageWithSource,
-                                                                              data: .init(content: "Successfully shortened link: \(shortLinkResult.shortURL)")))
-        } else {
-            _ = try await bot.client.createInteractionResponse(id: interaction.id,
-                                                               token: interaction.token,
-                                                               payload: .init(type: .channelMessageWithSource,
-                                                                              data: .init(content: "Could not shorten link", flags: [.ephemeral])))
+            message = "Successfully shortened link: \(shortLinkResult.shortURL)"
         }
+        _ = try await bot.client.createInteractionResponse(id: interaction.id,
+                                                           token: interaction.token,
+                                                           payload: .init(type: .channelMessageWithSource,
+                                                                          data: .init(content: message)))
     }
 }
