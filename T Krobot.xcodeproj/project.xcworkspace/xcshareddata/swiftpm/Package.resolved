@@ -12,10 +12,10 @@
     {
       "identity" : "discordbm",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/MahdiBM/DiscordBM",
+      "location" : "https://github.com/jiachenyee/discordbm",
       "state" : {
         "branch" : "main",
-        "revision" : "9b0d6879ead7f0bad1d3b6d11aac07e94949ffaa"
+        "revision" : "b2aa77124c1d585655be2abf7e5c405ddc0aec4b"
       }
     },
     {

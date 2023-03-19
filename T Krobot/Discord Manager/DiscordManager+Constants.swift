@@ -17,6 +17,8 @@ extension DiscordManager {
         enum Role {
             static let verifiers = "1086946406989828236"
             static let trainer = "1086943974004113481"
+            
+            static let everyone = "1055369990435516447"
         }
         
         enum Emoji {
@@ -32,5 +34,10 @@ extension DiscordManager {
         }
         
         static let guildId = "1055369990435516447"
+        
+        enum Category {
+            static let classesCategory = "1055369991928684624"
+            static let archivedCategory = "1055372408128819200"
+        }
     }
 }

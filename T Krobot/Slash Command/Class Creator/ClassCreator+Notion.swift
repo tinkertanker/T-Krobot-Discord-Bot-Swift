@@ -50,22 +50,18 @@ extension ClassCreator {
         
         let (data, response) = try await URLSession.shared.data(for: request)
         
-        print(String(data: data, encoding: .utf8)!)
-        
         guard let response = response as? HTTPURLResponse,
               200...299 ~= response.statusCode else {
             throw NotionError.httpError
         }
+        
+        print("Successfully created Notion page")
         
         return try JSONDecoder().decode(NotionPageCreationResult.self, from: data)
     }
 }
 
 struct NotionPageCreationResult: Codable {
-    var id: String
-    var createdDate: String
-    var lastEditedTime: String
-    
     var url: String
 }
 

@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		32445A0429C55C4600E2F584 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32445A0329C55C4600E2F584 /* main.swift */; };
-		32445A1129C55F2200E2F584 /* DiscordBM in Frameworks */ = {isa = PBXBuildFile; productRef = 32445A1029C55F2200E2F584 /* DiscordBM */; };
-		32445A1329C55F2200E2F584 /* DiscordLogger in Frameworks */ = {isa = PBXBuildFile; productRef = 32445A1229C55F2200E2F584 /* DiscordLogger */; };
 		326FAF2429C5ACE100D95306 /* LinkShortener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF2329C5ACE100D95306 /* LinkShortener.swift */; };
 		326FAF2729C5B2A800D95306 /* ShortLinkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF2629C5B2A800D95306 /* ShortLinkResult.swift */; };
 		326FAF2929C5B48900D95306 /* SlashCommandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF2829C5B48900D95306 /* SlashCommandable.swift */; };
@@ -24,6 +22,8 @@
 		326FAF4029C6F71100D95306 /* ClassCreator+Notion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF3F29C6F71100D95306 /* ClassCreator+Notion.swift */; };
 		326FAF4229C7217300D95306 /* DiscordManager+Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF4129C7217300D95306 /* DiscordManager+Verification.swift */; };
 		326FAF4429C7219A00D95306 /* DiscordManager+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF4329C7219A00D95306 /* DiscordManager+Constants.swift */; };
+		326FAF4829C76BD900D95306 /* DiscordBM in Frameworks */ = {isa = PBXBuildFile; productRef = 326FAF4729C76BD900D95306 /* DiscordBM */; };
+		326FAF4A29C78BFB00D95306 /* ClassInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF4929C78BFB00D95306 /* ClassInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +55,7 @@
 		326FAF3F29C6F71100D95306 /* ClassCreator+Notion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClassCreator+Notion.swift"; sourceTree = "<group>"; };
 		326FAF4129C7217300D95306 /* DiscordManager+Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscordManager+Verification.swift"; sourceTree = "<group>"; };
 		326FAF4329C7219A00D95306 /* DiscordManager+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscordManager+Constants.swift"; sourceTree = "<group>"; };
+		326FAF4929C78BFB00D95306 /* ClassInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32445A1129C55F2200E2F584 /* DiscordBM in Frameworks */,
-				32445A1329C55F2200E2F584 /* DiscordLogger in Frameworks */,
+				326FAF4829C76BD900D95306 /* DiscordBM in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				326FAF3C29C6F5AB00D95306 /* PersistenceManager.swift */,
+				326FAF4929C78BFB00D95306 /* ClassInfo.swift */,
 			);
 			path = "Persistence Manager";
 			sourceTree = "<group>";
@@ -174,8 +175,7 @@
 			);
 			name = "T Krobot";
 			packageProductDependencies = (
-				32445A1029C55F2200E2F584 /* DiscordBM */,
-				32445A1229C55F2200E2F584 /* DiscordLogger */,
+				326FAF4729C76BD900D95306 /* DiscordBM */,
 			);
 			productName = "T Krobot";
 			productReference = 32445A0029C55C4600E2F584 /* T Krobot */;
@@ -206,7 +206,7 @@
 			);
 			mainGroup = 324459F729C55C4600E2F584;
 			packageReferences = (
-				32445A0F29C55F2200E2F584 /* XCRemoteSwiftPackageReference "DiscordBM" */,
+				326FAF4629C76BD900D95306 /* XCRemoteSwiftPackageReference "discordbm" */,
 			);
 			productRefGroup = 32445A0129C55C4600E2F584 /* Products */;
 			projectDirPath = "";
@@ -256,6 +256,7 @@
 				326FAF3029C6E3DA00D95306 /* ClassCreator.swift in Sources */,
 				326FAF4229C7217300D95306 /* DiscordManager+Verification.swift in Sources */,
 				326FAF2929C5B48900D95306 /* SlashCommandable.swift in Sources */,
+				326FAF4A29C78BFB00D95306 /* ClassInfo.swift in Sources */,
 				326FAF3729C6EA9500D95306 /* DiscordManager+EventHandling.swift in Sources */,
 				326FAF2B29C6E2FF00D95306 /* Keys.swift in Sources */,
 				326FAF4029C6F71100D95306 /* ClassCreator+Notion.swift in Sources */,
@@ -424,9 +425,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		32445A0F29C55F2200E2F584 /* XCRemoteSwiftPackageReference "DiscordBM" */ = {
+		326FAF4629C76BD900D95306 /* XCRemoteSwiftPackageReference "discordbm" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MahdiBM/DiscordBM";
+			repositoryURL = "https://github.com/jiachenyee/discordbm";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -435,15 +436,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		32445A1029C55F2200E2F584 /* DiscordBM */ = {
+		326FAF4729C76BD900D95306 /* DiscordBM */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 32445A0F29C55F2200E2F584 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			package = 326FAF4629C76BD900D95306 /* XCRemoteSwiftPackageReference "discordbm" */;
 			productName = DiscordBM;
-		};
-		32445A1229C55F2200E2F584 /* DiscordLogger */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 32445A0F29C55F2200E2F584 /* XCRemoteSwiftPackageReference "DiscordBM" */;
-			productName = DiscordLogger;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
