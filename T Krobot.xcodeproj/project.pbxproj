@@ -27,6 +27,7 @@
 		326FAF4D29C8072D00D95306 /* JoinChannels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF4C29C8072D00D95306 /* JoinChannels.swift */; };
 		326FAF5029C823C600D95306 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF4F29C823C600D95306 /* Verification.swift */; };
 		326FAF5329C98CB200D95306 /* MessageComponentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF5229C98CB200D95306 /* MessageComponentable.swift */; };
+		326FAF5629C99CDC00D95306 /* Invite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF5529C99CDC00D95306 /* Invite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -63,6 +64,7 @@
 		326FAF4F29C823C600D95306 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
 		326FAF5129C98B0600D95306 /* T Krobot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "T Krobot.entitlements"; sourceTree = "<group>"; };
 		326FAF5229C98CB200D95306 /* MessageComponentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageComponentable.swift; sourceTree = "<group>"; };
+		326FAF5529C99CDC00D95306 /* Invite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				326FAF5229C98CB200D95306 /* MessageComponentable.swift */,
 				326FAF2829C5B48900D95306 /* SlashCommandable.swift */,
+				326FAF5429C99CD200D95306 /* Invite */,
 				326FAF4E29C823BE00D95306 /* Verification */,
 				326FAF4B29C8072200D95306 /* Join Channels */,
 				326FAF2E29C6E3C800D95306 /* Class Creator */,
@@ -182,6 +185,14 @@
 				326FAF4F29C823C600D95306 /* Verification.swift */,
 			);
 			path = Verification;
+			sourceTree = "<group>";
+		};
+		326FAF5429C99CD200D95306 /* Invite */ = {
+			isa = PBXGroup;
+			children = (
+				326FAF5529C99CDC00D95306 /* Invite.swift */,
+			);
+			path = Invite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +288,7 @@
 				326FAF3329C6E9DB00D95306 /* DiscordManager.swift in Sources */,
 				326FAF3D29C6F5AB00D95306 /* PersistenceManager.swift in Sources */,
 				326FAF4429C7219A00D95306 /* DiscordManager+Constants.swift in Sources */,
+				326FAF5629C99CDC00D95306 /* Invite.swift in Sources */,
 				326FAF3B29C6EB9100D95306 /* LinkShortener+SlashCommand.swift in Sources */,
 				326FAF5029C823C600D95306 /* Verification.swift in Sources */,
 				326FAF4D29C8072D00D95306 /* JoinChannels.swift in Sources */,

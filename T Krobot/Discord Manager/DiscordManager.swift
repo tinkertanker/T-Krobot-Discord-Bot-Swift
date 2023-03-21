@@ -34,7 +34,8 @@ class DiscordManager {
             LinkShortener(bot: bot),
             ClassCreator(bot: bot),
             JoinChannels(bot: bot),
-            Verification(bot: bot)
+            Verification(bot: bot),
+            Invite(bot: bot)
         ]
     }
     
