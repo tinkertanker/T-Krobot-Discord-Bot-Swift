@@ -87,6 +87,8 @@ class ClassCreator: SlashCommandable {
         
         let newClass = try await setUpClass(name: className, trainerUserIDs: trainerUserIDs)
         
+        persistenceManager.classes[newClass.roleId] = newClass
+        
         try await sendCompletionMessages(withInteraction: interaction, newClass: newClass)
     }
     

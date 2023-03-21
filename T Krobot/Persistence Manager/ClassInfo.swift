@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ClassInfo: Codable {
+struct ClassInfo: Codable, Hashable {
     var name: String
     
     var channelId: String

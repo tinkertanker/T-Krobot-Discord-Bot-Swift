@@ -24,8 +24,6 @@ extension DiscordManager {
                 case .modalSubmit:
                     break
                 }
-            case .guildMemberAdd(let newMember):
-                handleNewMember(member: newMember)
             default: break
             }
         }
@@ -34,13 +32,12 @@ extension DiscordManager {
     func handleIncomingMessageComponent(_ component: Interaction.MessageComponent, interaction: Interaction) {
         let id = component.custom_id.split(separator: ".").first!
         
+        let manager = slashCommandManagers.first {
+            ($0 as? MessageComponentable)?.customIdPrefix ?? "" == id
+        } as? MessageComponentable
+        
         Task {
-            switch id {
-            case "verify":
-                try? await handleVerificationApproval(customId: component.custom_id,
-                                                      interaction: interaction)
-            default: break
-            }
+            try await manager?.handleMessageComponent(component, interaction: interaction)
         }
     }
 }

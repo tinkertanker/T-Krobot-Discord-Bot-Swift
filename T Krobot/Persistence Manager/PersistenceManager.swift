@@ -8,12 +8,50 @@
 import Foundation
 
 class PersistenceManager {
-    func getApplicationSupportURL() -> URL? {
-        let applicationSupport = try? FileManager.default.url(for: .applicationSupportDirectory,
-                                                              in: .localDomainMask,
-                                                              appropriateFor: nil,
-                                                              create: true)
+    
+    var classes: [String: ClassInfo] = [:] {
+        didSet {
+            Task.detached {
+                self.writeData()
+            }
+        }
+    }
+    
+    func getFolderURL() -> URL? {
+        let folder = FileManager.default.urls(for: .desktopDirectory, in: .allDomainsMask).first
+        return folder
+    }
+    
+    func getPersistenceURL() -> URL {
+        getFolderURL()!.appending(component: "classes.json")
+    }
+    
+    init() {
+        loadData()
+    }
+    
+    func loadData() {
+        do {
+            let data = try Data(contentsOf: getPersistenceURL())
+            classes = try JSONDecoder().decode([String: ClassInfo].self, from: data)
+        } catch {
+            classes = [:]
+        }
+    }
+    
+    func writeData() {
+        print("WRITE")
         
-        return applicationSupport?.appending(component: "sg.tk.tkrobot")
+        print(getPersistenceURL().path(percentEncoded: false))
+        
+        do {
+            let encodedClasses = try JSONEncoder().encode(classes)
+            let didSucceed = FileManager.default.createFile(atPath: getPersistenceURL().path(), contents: encodedClasses)
+            if didSucceed {
+                print("YAY")
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }

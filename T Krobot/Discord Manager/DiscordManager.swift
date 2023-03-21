@@ -32,7 +32,9 @@ class DiscordManager {
         
         slashCommandManagers = [
             LinkShortener(bot: bot),
-            ClassCreator(bot: bot)
+            ClassCreator(bot: bot),
+            JoinChannels(bot: bot),
+            Verification(bot: bot)
         ]
     }
     

@@ -13,7 +13,10 @@ extension DiscordManager {
         for manager in slashCommandManagers {
             let slashCommand = manager.slashCommand
             
-            _ = try? await bot.client.createGlobalApplicationCommand(payload: slashCommand)
+            // swiftlint:disable force_try
+            let result = try! await bot.client.createGlobalApplicationCommand(payload: slashCommand)
+            
+            print(result.httpResponse)
         }
     }
     

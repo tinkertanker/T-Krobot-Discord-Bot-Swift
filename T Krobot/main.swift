@@ -8,5 +8,6 @@
 import Foundation
 
 let discordManager = DiscordManager()
+let persistenceManager = PersistenceManager()
 
 discordManager.initialize()

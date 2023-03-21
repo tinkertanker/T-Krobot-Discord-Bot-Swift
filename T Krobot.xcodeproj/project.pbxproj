@@ -24,6 +24,9 @@
 		326FAF4429C7219A00D95306 /* DiscordManager+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF4329C7219A00D95306 /* DiscordManager+Constants.swift */; };
 		326FAF4829C76BD900D95306 /* DiscordBM in Frameworks */ = {isa = PBXBuildFile; productRef = 326FAF4729C76BD900D95306 /* DiscordBM */; };
 		326FAF4A29C78BFB00D95306 /* ClassInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF4929C78BFB00D95306 /* ClassInfo.swift */; };
+		326FAF4D29C8072D00D95306 /* JoinChannels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF4C29C8072D00D95306 /* JoinChannels.swift */; };
+		326FAF5029C823C600D95306 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF4F29C823C600D95306 /* Verification.swift */; };
+		326FAF5329C98CB200D95306 /* MessageComponentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF5229C98CB200D95306 /* MessageComponentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +59,10 @@
 		326FAF4129C7217300D95306 /* DiscordManager+Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscordManager+Verification.swift"; sourceTree = "<group>"; };
 		326FAF4329C7219A00D95306 /* DiscordManager+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscordManager+Constants.swift"; sourceTree = "<group>"; };
 		326FAF4929C78BFB00D95306 /* ClassInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInfo.swift; sourceTree = "<group>"; };
+		326FAF4C29C8072D00D95306 /* JoinChannels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinChannels.swift; sourceTree = "<group>"; };
+		326FAF4F29C823C600D95306 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; };
+		326FAF5129C98B0600D95306 /* T Krobot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "T Krobot.entitlements"; sourceTree = "<group>"; };
+		326FAF5229C98CB200D95306 /* MessageComponentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageComponentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +96,7 @@
 		32445A0229C55C4600E2F584 /* T Krobot */ = {
 			isa = PBXGroup;
 			children = (
+				326FAF5129C98B0600D95306 /* T Krobot.entitlements */,
 				32445A0329C55C4600E2F584 /* main.swift */,
 				326FAF3E29C6F66D00D95306 /* Persistence Manager */,
 				326FAF3929C6EB3100D95306 /* Discord Manager */,
@@ -120,7 +128,10 @@
 		326FAF3129C6E94D00D95306 /* Slash Command */ = {
 			isa = PBXGroup;
 			children = (
+				326FAF5229C98CB200D95306 /* MessageComponentable.swift */,
 				326FAF2829C5B48900D95306 /* SlashCommandable.swift */,
+				326FAF4E29C823BE00D95306 /* Verification */,
+				326FAF4B29C8072200D95306 /* Join Channels */,
 				326FAF2E29C6E3C800D95306 /* Class Creator */,
 				326FAF2529C5B29600D95306 /* Link Shortener */,
 			);
@@ -155,6 +166,22 @@
 				326FAF4929C78BFB00D95306 /* ClassInfo.swift */,
 			);
 			path = "Persistence Manager";
+			sourceTree = "<group>";
+		};
+		326FAF4B29C8072200D95306 /* Join Channels */ = {
+			isa = PBXGroup;
+			children = (
+				326FAF4C29C8072D00D95306 /* JoinChannels.swift */,
+			);
+			path = "Join Channels";
+			sourceTree = "<group>";
+		};
+		326FAF4E29C823BE00D95306 /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+				326FAF4F29C823C600D95306 /* Verification.swift */,
+			);
+			path = Verification;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,12 +271,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				326FAF5329C98CB200D95306 /* MessageComponentable.swift in Sources */,
 				326FAF2429C5ACE100D95306 /* LinkShortener.swift in Sources */,
 				32445A0429C55C4600E2F584 /* main.swift in Sources */,
 				326FAF3329C6E9DB00D95306 /* DiscordManager.swift in Sources */,
 				326FAF3D29C6F5AB00D95306 /* PersistenceManager.swift in Sources */,
 				326FAF4429C7219A00D95306 /* DiscordManager+Constants.swift in Sources */,
 				326FAF3B29C6EB9100D95306 /* LinkShortener+SlashCommand.swift in Sources */,
+				326FAF5029C823C600D95306 /* Verification.swift in Sources */,
+				326FAF4D29C8072D00D95306 /* JoinChannels.swift in Sources */,
 				326FAF3529C6EA2200D95306 /* DiscordManager+SlashCommands.swift in Sources */,
 				326FAF2729C5B2A800D95306 /* ShortLinkResult.swift in Sources */,
 				326FAF2D29C6E38C00D95306 /* Keys+Constants.swift in Sources */,
@@ -382,6 +412,7 @@
 		32445A0829C55C4600E2F584 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "T Krobot/T Krobot.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XL5JK4F896;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -393,6 +424,7 @@
 		32445A0929C55C4600E2F584 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "T Krobot/T Krobot.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XL5JK4F896;
 				ENABLE_HARDENED_RUNTIME = YES;
