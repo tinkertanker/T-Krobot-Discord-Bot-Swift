@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32445A0429C55C4600E2F584 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32445A0329C55C4600E2F584 /* main.swift */; };
+		326FAF2429C5ACE100D95306 /* LinkShortener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF2329C5ACE100D95306 /* LinkShortener.swift */; };
+		326FAF2729C5B2A800D95306 /* ShortLinkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF2629C5B2A800D95306 /* ShortLinkResult.swift */; };
+		326FAF2929C5B48900D95306 /* SlashCommandable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF2829C5B48900D95306 /* SlashCommandable.swift */; };
+		326FAF2B29C6E2FF00D95306 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF2A29C6E2FF00D95306 /* Keys.swift */; };
+		326FAF3029C6E3DA00D95306 /* ClassCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF2F29C6E3DA00D95306 /* ClassCreator.swift */; };
+		326FAF3329C6E9DB00D95306 /* DiscordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF3229C6E9DB00D95306 /* DiscordManager.swift */; };
+		326FAF3529C6EA2200D95306 /* DiscordManager+SlashCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF3429C6EA2200D95306 /* DiscordManager+SlashCommands.swift */; };
+		326FAF3729C6EA9500D95306 /* DiscordManager+EventHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF3629C6EA9500D95306 /* DiscordManager+EventHandling.swift */; };
+		326FAF3B29C6EB9100D95306 /* LinkShortener+SlashCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF3A29C6EB9100D95306 /* LinkShortener+SlashCommand.swift */; };
+		326FAF3D29C6F5AB00D95306 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF3C29C6F5AB00D95306 /* PersistenceManager.swift */; };
+		326FAF4029C6F71100D95306 /* ClassCreator+Notion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF3F29C6F71100D95306 /* ClassCreator+Notion.swift */; };
+		326FAF4229C7217300D95306 /* DiscordManager+Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF4129C7217300D95306 /* DiscordManager+Verification.swift */; };
+		326FAF4429C7219A00D95306 /* DiscordManager+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF4329C7219A00D95306 /* DiscordManager+Constants.swift */; };
+		326FAF4A29C78BFB00D95306 /* ClassInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF4929C78BFB00D95306 /* ClassInfo.swift */; };
+		326FAF4D29C8072D00D95306 /* JoinChannels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF4C29C8072D00D95306 /* JoinChannels.swift */; };
+		326FAF5029C823C600D95306 /* Verification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF4F29C823C600D95306 /* Verification.swift */; };
+		326FAF5329C98CB200D95306 /* MessageComponentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF5229C98CB200D95306 /* MessageComponentable.swift */; };
+		326FAF5629C99CDC00D95306 /* Invite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 326FAF5529C99CDC00D95306 /* Invite.swift */; };
+		D91CEE3D2A417FAB001DA720 /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91CEE3C2A417FAB001DA720 /* Archive.swift */; };
+		D935F9CA2A42F720002B2BB3 /* DiscordAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D935F9C92A42F720002B2BB3 /* DiscordAuth */; };
+		D935F9CC2A42F720002B2BB3 /* DiscordBM in Frameworks */ = {isa = PBXBuildFile; productRef = D935F9CB2A42F720002B2BB3 /* DiscordBM */; };
+		D935F9CE2A42F720002B2BB3 /* DiscordCore in Frameworks */ = {isa = PBXBuildFile; productRef = D935F9CD2A42F720002B2BB3 /* DiscordCore */; };
+		D935F9D02A42F720002B2BB3 /* DiscordGateway in Frameworks */ = {isa = PBXBuildFile; productRef = D935F9CF2A42F720002B2BB3 /* DiscordGateway */; };
+		D935F9D22A42F720002B2BB3 /* DiscordHTTP in Frameworks */ = {isa = PBXBuildFile; productRef = D935F9D12A42F720002B2BB3 /* DiscordHTTP */; };
+		D935F9D42A42F720002B2BB3 /* DiscordModels in Frameworks */ = {isa = PBXBuildFile; productRef = D935F9D32A42F720002B2BB3 /* DiscordModels */; };
+		D935F9D62A42F720002B2BB3 /* DiscordUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = D935F9D52A42F720002B2BB3 /* DiscordUtilities */; };
+		D945A3512A496B2200019E9B /* String+substring.swift in Sources */ = {isa = PBXBuildFile; fileRef = D945A3502A496B2200019E9B /* String+substring.swift */; };
+		D945A3542A4A851800019E9B /* Archive+Notion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D945A3532A4A851800019E9B /* Archive+Notion.swift */; };
+		D945A3572A4ACF9A00019E9B /* CFI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D945A3562A4ACF9A00019E9B /* CFI.swift */; };
+		D945A3592A4BDD3900019E9B /* CFIClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = D945A3582A4BDD3900019E9B /* CFIClose.swift */; };
+		D945A35D2A4C068A00019E9B /* findPrivateChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D945A35C2A4C068A00019E9B /* findPrivateChannel.swift */; };
+		D98748F12A443311000B5AE4 /* DiscordLogger in Frameworks */ = {isa = PBXBuildFile; productRef = D98748F02A443311000B5AE4 /* DiscordLogger */; };
+		D98748F52A44398E000B5AE4 /* GatewayEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98748F42A44398E000B5AE4 /* GatewayEventHandler.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		324459FE29C55C4600E2F584 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		32445A0029C55C4600E2F584 /* T Krobot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "T Krobot"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32445A0329C55C4600E2F584 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		326FAF2329C5ACE100D95306 /* LinkShortener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkShortener.swift; sourceTree = "<group>"; };
+		326FAF2629C5B2A800D95306 /* ShortLinkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortLinkResult.swift; sourceTree = "<group>"; };
+		326FAF2829C5B48900D95306 /* SlashCommandable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlashCommandable.swift; sourceTree = "<group>"; };
+		326FAF2A29C6E2FF00D95306 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		326FAF2F29C6E3DA00D95306 /* ClassCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassCreator.swift; sourceTree = "<group>"; };
+		326FAF3229C6E9DB00D95306 /* DiscordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscordManager.swift; sourceTree = "<group>"; };
+		326FAF3429C6EA2200D95306 /* DiscordManager+SlashCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscordManager+SlashCommands.swift"; sourceTree = "<group>"; };
+		326FAF3629C6EA9500D95306 /* DiscordManager+EventHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscordManager+EventHandling.swift"; sourceTree = "<group>"; };
+		326FAF3A29C6EB9100D95306 /* LinkShortener+SlashCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LinkShortener+SlashCommand.swift"; sourceTree = "<group>"; };
+		326FAF3C29C6F5AB00D95306 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		326FAF3F29C6F71100D95306 /* ClassCreator+Notion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClassCreator+Notion.swift"; sourceTree = "<group>"; };
+		326FAF4129C7217300D95306 /* DiscordManager+Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscordManager+Verification.swift"; sourceTree = "<group>"; };
+		326FAF4329C7219A00D95306 /* DiscordManager+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscordManager+Constants.swift"; sourceTree = "<group>"; };
+		326FAF4929C78BFB00D95306 /* ClassInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInfo.swift; sourceTree = "<group>"; };
+		326FAF4C29C8072D00D95306 /* JoinChannels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinChannels.swift; sourceTree = "<group>"; };
+		326FAF4F29C823C600D95306 /* Verification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Verification.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		326FAF5129C98B0600D95306 /* T Krobot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "T Krobot.entitlements"; sourceTree = "<group>"; };
+		326FAF5229C98CB200D95306 /* MessageComponentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageComponentable.swift; sourceTree = "<group>"; };
+		326FAF5529C99CDC00D95306 /* Invite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invite.swift; sourceTree = "<group>"; };
+		D902E6472A39C4DB0006770F /* swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = swiftlint.yml; sourceTree = "<group>"; };
+		D91CEE3C2A417FAB001DA720 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
+		D945A3502A496B2200019E9B /* String+substring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+substring.swift"; sourceTree = "<group>"; };
+		D945A3532A4A851800019E9B /* Archive+Notion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Archive+Notion.swift"; sourceTree = "<group>"; };
+		D945A3562A4ACF9A00019E9B /* CFI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFI.swift; sourceTree = "<group>"; };
+		D945A3582A4BDD3900019E9B /* CFIClose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFIClose.swift; sourceTree = "<group>"; };
+		D945A35C2A4C068A00019E9B /* findPrivateChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findPrivateChannel.swift; sourceTree = "<group>"; };
+		D976AD632A3AC2070062FA60 /* SwiftLint-main */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "SwiftLint-main"; path = "../../Desktop/SwiftLint-main"; sourceTree = "<group>"; };
+		D98748F42A44398E000B5AE4 /* GatewayEventHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GatewayEventHandler.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		324459FD29C55C4600E2F584 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D935F9D22A42F720002B2BB3 /* DiscordHTTP in Frameworks */,
+				D935F9D62A42F720002B2BB3 /* DiscordUtilities in Frameworks */,
+				D935F9D42A42F720002B2BB3 /* DiscordModels in Frameworks */,
+				D935F9D02A42F720002B2BB3 /* DiscordGateway in Frameworks */,
+				D935F9CE2A42F720002B2BB3 /* DiscordCore in Frameworks */,
+				D98748F12A443311000B5AE4 /* DiscordLogger in Frameworks */,
+				D935F9CC2A42F720002B2BB3 /* DiscordBM in Frameworks */,
+				D935F9CA2A42F720002B2BB3 /* DiscordAuth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		324459F729C55C4600E2F584 = {
+			isa = PBXGroup;
+			children = (
+				D976AD622A3AC2070062FA60 /* Packages */,
+				D902E6472A39C4DB0006770F /* swiftlint.yml */,
+				32445A0229C55C4600E2F584 /* T Krobot */,
+				32445A0129C55C4600E2F584 /* Products */,
+				D9E606212A42922D003058E3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		32445A0129C55C4600E2F584 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32445A0029C55C4600E2F584 /* T Krobot */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32445A0229C55C4600E2F584 /* T Krobot */ = {
+			isa = PBXGroup;
+			children = (
+				326FAF5129C98B0600D95306 /* T Krobot.entitlements */,
+				32445A0329C55C4600E2F584 /* main.swift */,
+				D945A3502A496B2200019E9B /* String+substring.swift */,
+				326FAF3E29C6F66D00D95306 /* Persistence Manager */,
+				326FAF3929C6EB3100D95306 /* Discord Manager */,
+				326FAF3829C6EB2A00D95306 /* Credentials */,
+				326FAF3129C6E94D00D95306 /* Slash Command */,
+			);
+			path = "T Krobot";
+			sourceTree = "<group>";
+		};
+		326FAF2529C5B29600D95306 /* Link Shortener */ = {
+			isa = PBXGroup;
+			children = (
+				326FAF2329C5ACE100D95306 /* LinkShortener.swift */,
+				326FAF3A29C6EB9100D95306 /* LinkShortener+SlashCommand.swift */,
+				326FAF2629C5B2A800D95306 /* ShortLinkResult.swift */,
+			);
+			path = "Link Shortener";
+			sourceTree = "<group>";
+		};
+		326FAF2E29C6E3C800D95306 /* Class Creator */ = {
+			isa = PBXGroup;
+			children = (
+				326FAF2F29C6E3DA00D95306 /* ClassCreator.swift */,
+				326FAF3F29C6F71100D95306 /* ClassCreator+Notion.swift */,
+			);
+			path = "Class Creator";
+			sourceTree = "<group>";
+		};
+		326FAF3129C6E94D00D95306 /* Slash Command */ = {
+			isa = PBXGroup;
+			children = (
+				326FAF5229C98CB200D95306 /* MessageComponentable.swift */,
+				326FAF2829C5B48900D95306 /* SlashCommandable.swift */,
+				D91CEE3B2A417F74001DA720 /* Archive */,
+				D945A3552A4ACF0900019E9B /* CFI */,
+				326FAF2E29C6E3C800D95306 /* Class Creator */,
+				D945A35B2A4C067300019E9B /* Find Private Channel */,
+				326FAF5429C99CD200D95306 /* Invite */,
+				326FAF4B29C8072200D95306 /* Join Channels */,
+				326FAF2529C5B29600D95306 /* Link Shortener */,
+				326FAF4E29C823BE00D95306 /* Verification */,
+			);
+			path = "Slash Command";
+			sourceTree = "<group>";
+		};
+		326FAF3829C6EB2A00D95306 /* Credentials */ = {
+			isa = PBXGroup;
+			children = (
+				326FAF2A29C6E2FF00D95306 /* Keys.swift */,
+			);
+			path = Credentials;
+			sourceTree = "<group>";
+		};
+		326FAF3929C6EB3100D95306 /* Discord Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D98748F42A44398E000B5AE4 /* GatewayEventHandler.swift */,
+				326FAF3229C6E9DB00D95306 /* DiscordManager.swift */,
+				326FAF3629C6EA9500D95306 /* DiscordManager+EventHandling.swift */,
+				326FAF3429C6EA2200D95306 /* DiscordManager+SlashCommands.swift */,
+				326FAF4329C7219A00D95306 /* DiscordManager+Constants.swift */,
+				326FAF4129C7217300D95306 /* DiscordManager+Verification.swift */,
+			);
+			path = "Discord Manager";
+			sourceTree = "<group>";
+		};
+		326FAF3E29C6F66D00D95306 /* Persistence Manager */ = {
+			isa = PBXGroup;
+			children = (
+				326FAF3C29C6F5AB00D95306 /* PersistenceManager.swift */,
+				326FAF4929C78BFB00D95306 /* ClassInfo.swift */,
+			);
+			path = "Persistence Manager";
+			sourceTree = "<group>";
+		};
+		326FAF4B29C8072200D95306 /* Join Channels */ = {
+			isa = PBXGroup;
+			children = (
+				326FAF4C29C8072D00D95306 /* JoinChannels.swift */,
+			);
+			path = "Join Channels";
+			sourceTree = "<group>";
+		};
+		326FAF4E29C823BE00D95306 /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+				326FAF4F29C823C600D95306 /* Verification.swift */,
+			);
+			path = Verification;
+			sourceTree = "<group>";
+		};
+		326FAF5429C99CD200D95306 /* Invite */ = {
+			isa = PBXGroup;
+			children = (
+				326FAF5529C99CDC00D95306 /* Invite.swift */,
+			);
+			path = Invite;
+			sourceTree = "<group>";
+		};
+		D91CEE3B2A417F74001DA720 /* Archive */ = {
+			isa = PBXGroup;
+			children = (
+				D91CEE3C2A417FAB001DA720 /* Archive.swift */,
+				D945A3532A4A851800019E9B /* Archive+Notion.swift */,
+			);
+			path = Archive;
+			sourceTree = "<group>";
+		};
+		D945A3552A4ACF0900019E9B /* CFI */ = {
+			isa = PBXGroup;
+			children = (
+				D945A3562A4ACF9A00019E9B /* CFI.swift */,
+				D945A3582A4BDD3900019E9B /* CFIClose.swift */,
+			);
+			path = CFI;
+			sourceTree = "<group>";
+		};
+		D945A35B2A4C067300019E9B /* Find Private Channel */ = {
+			isa = PBXGroup;
+			children = (
+				D945A35C2A4C068A00019E9B /* findPrivateChannel.swift */,
+			);
+			path = "Find Private Channel";
+			sourceTree = "<group>";
+		};
+		D976AD622A3AC2070062FA60 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				D976AD632A3AC2070062FA60 /* SwiftLint-main */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		D9E606212A42922D003058E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		324459FF29C55C4600E2F584 /* T Krobot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32445A0729C55C4600E2F584 /* Build configuration list for PBXNativeTarget "T Krobot" */;
+			buildPhases = (
+				324459FC29C55C4600E2F584 /* Sources */,
+				324459FD29C55C4600E2F584 /* Frameworks */,
+				324459FE29C55C4600E2F584 /* CopyFiles */,
+				D902E6452A39C4840006770F /* Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D98748F32A44332B000B5AE4 /* PBXTargetDependency */,
+				D935F9E42A42F796002B2BB3 /* PBXTargetDependency */,
+				D935F9E22A42F78D002B2BB3 /* PBXTargetDependency */,
+				D935F9E02A42F789002B2BB3 /* PBXTargetDependency */,
+				D935F9DE2A42F783002B2BB3 /* PBXTargetDependency */,
+				D935F9DC2A42F77F002B2BB3 /* PBXTargetDependency */,
+				D935F9DA2A42F77B002B2BB3 /* PBXTargetDependency */,
+				D935F9D82A42F777002B2BB3 /* PBXTargetDependency */,
+				D976AD652A3AE1210062FA60 /* PBXTargetDependency */,
+			);
+			name = "T Krobot";
+			packageProductDependencies = (
+				D935F9C92A42F720002B2BB3 /* DiscordAuth */,
+				D935F9CB2A42F720002B2BB3 /* DiscordBM */,
+				D935F9CD2A42F720002B2BB3 /* DiscordCore */,
+				D935F9CF2A42F720002B2BB3 /* DiscordGateway */,
+				D935F9D12A42F720002B2BB3 /* DiscordHTTP */,
+				D935F9D32A42F720002B2BB3 /* DiscordModels */,
+				D935F9D52A42F720002B2BB3 /* DiscordUtilities */,
+				D98748F02A443311000B5AE4 /* DiscordLogger */,
+			);
+			productName = "T Krobot";
+			productReference = 32445A0029C55C4600E2F584 /* T Krobot */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		324459F829C55C4600E2F584 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					324459FF29C55C4600E2F584 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 324459FB29C55C4600E2F584 /* Build configuration list for PBXProject "T Krobot" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 324459F729C55C4600E2F584;
+			packageReferences = (
+				D935F9C82A42F720002B2BB3 /* XCRemoteSwiftPackageReference "DiscordBM" */,
+				D98748EF2A443311000B5AE4 /* XCRemoteSwiftPackageReference "DiscordLogger" */,
+			);
+			productRefGroup = 32445A0129C55C4600E2F584 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				324459FF29C55C4600E2F584 /* T Krobot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D902E6452A39C4840006770F /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		324459FC29C55C4600E2F584 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D945A3542A4A851800019E9B /* Archive+Notion.swift in Sources */,
+				326FAF5329C98CB200D95306 /* MessageComponentable.swift in Sources */,
+				D945A35D2A4C068A00019E9B /* findPrivateChannel.swift in Sources */,
+				326FAF2429C5ACE100D95306 /* LinkShortener.swift in Sources */,
+				32445A0429C55C4600E2F584 /* main.swift in Sources */,
+				326FAF3329C6E9DB00D95306 /* DiscordManager.swift in Sources */,
+				326FAF3D29C6F5AB00D95306 /* PersistenceManager.swift in Sources */,
+				326FAF4429C7219A00D95306 /* DiscordManager+Constants.swift in Sources */,
+				326FAF5629C99CDC00D95306 /* Invite.swift in Sources */,
+				326FAF3B29C6EB9100D95306 /* LinkShortener+SlashCommand.swift in Sources */,
+				326FAF5029C823C600D95306 /* Verification.swift in Sources */,
+				D945A3592A4BDD3900019E9B /* CFIClose.swift in Sources */,
+				326FAF4D29C8072D00D95306 /* JoinChannels.swift in Sources */,
+				D91CEE3D2A417FAB001DA720 /* Archive.swift in Sources */,
+				326FAF3529C6EA2200D95306 /* DiscordManager+SlashCommands.swift in Sources */,
+				326FAF2729C5B2A800D95306 /* ShortLinkResult.swift in Sources */,
+				D945A3572A4ACF9A00019E9B /* CFI.swift in Sources */,
+				326FAF3029C6E3DA00D95306 /* ClassCreator.swift in Sources */,
+				D945A3512A496B2200019E9B /* String+substring.swift in Sources */,
+				326FAF4229C7217300D95306 /* DiscordManager+Verification.swift in Sources */,
+				326FAF2929C5B48900D95306 /* SlashCommandable.swift in Sources */,
+				326FAF4A29C78BFB00D95306 /* ClassInfo.swift in Sources */,
+				326FAF3729C6EA9500D95306 /* DiscordManager+EventHandling.swift in Sources */,
+				326FAF2B29C6E2FF00D95306 /* Keys.swift in Sources */,
+				326FAF4029C6F71100D95306 /* ClassCreator+Notion.swift in Sources */,
+				D98748F52A44398E000B5AE4 /* GatewayEventHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D935F9D82A42F777002B2BB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = D935F9D72A42F777002B2BB3 /* DiscordAuth */;
+		};
+		D935F9DA2A42F77B002B2BB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = D935F9D92A42F77B002B2BB3 /* DiscordBM */;
+		};
+		D935F9DC2A42F77F002B2BB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = D935F9DB2A42F77F002B2BB3 /* DiscordCore */;
+		};
+		D935F9DE2A42F783002B2BB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = D935F9DD2A42F783002B2BB3 /* DiscordGateway */;
+		};
+		D935F9E02A42F789002B2BB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = D935F9DF2A42F789002B2BB3 /* DiscordHTTP */;
+		};
+		D935F9E22A42F78D002B2BB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = D935F9E12A42F78D002B2BB3 /* DiscordModels */;
+		};
+		D935F9E42A42F796002B2BB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = D935F9E32A42F796002B2BB3 /* DiscordUtilities */;
+		};
+		D976AD652A3AE1210062FA60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = D976AD642A3AE1210062FA60 /* SwiftLintPlugin */;
+		};
+		D98748F32A44332B000B5AE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = D98748F22A44332B000B5AE4 /* DiscordLogger */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		32445A0529C55C4600E2F584 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		32445A0629C55C4600E2F584 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		32445A0829C55C4600E2F584 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "T Krobot/T Krobot.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = NH38LYHW4U;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		32445A0929C55C4600E2F584 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "T Krobot/T Krobot.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = NH38LYHW4U;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		324459FB29C55C4600E2F584 /* Build configuration list for PBXProject "T Krobot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32445A0529C55C4600E2F584 /* Debug */,
+				32445A0629C55C4600E2F584 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32445A0729C55C4600E2F584 /* Build configuration list for PBXNativeTarget "T Krobot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32445A0829C55C4600E2F584 /* Debug */,
+				32445A0929C55C4600E2F584 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D935F9C82A42F720002B2BB3 /* XCRemoteSwiftPackageReference "DiscordBM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DiscordBM/DiscordBM.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		D98748EF2A443311000B5AE4 /* XCRemoteSwiftPackageReference "DiscordLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DiscordBM/DiscordLogger";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D935F9C92A42F720002B2BB3 /* DiscordAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D935F9C82A42F720002B2BB3 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordAuth;
+		};
+		D935F9CB2A42F720002B2BB3 /* DiscordBM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D935F9C82A42F720002B2BB3 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordBM;
+		};
+		D935F9CD2A42F720002B2BB3 /* DiscordCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D935F9C82A42F720002B2BB3 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordCore;
+		};
+		D935F9CF2A42F720002B2BB3 /* DiscordGateway */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D935F9C82A42F720002B2BB3 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordGateway;
+		};
+		D935F9D12A42F720002B2BB3 /* DiscordHTTP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D935F9C82A42F720002B2BB3 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordHTTP;
+		};
+		D935F9D32A42F720002B2BB3 /* DiscordModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D935F9C82A42F720002B2BB3 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordModels;
+		};
+		D935F9D52A42F720002B2BB3 /* DiscordUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D935F9C82A42F720002B2BB3 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordUtilities;
+		};
+		D935F9D72A42F777002B2BB3 /* DiscordAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D935F9C82A42F720002B2BB3 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordAuth;
+		};
+		D935F9D92A42F77B002B2BB3 /* DiscordBM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D935F9C82A42F720002B2BB3 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordBM;
+		};
+		D935F9DB2A42F77F002B2BB3 /* DiscordCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D935F9C82A42F720002B2BB3 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordCore;
+		};
+		D935F9DD2A42F783002B2BB3 /* DiscordGateway */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D935F9C82A42F720002B2BB3 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordGateway;
+		};
+		D935F9DF2A42F789002B2BB3 /* DiscordHTTP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D935F9C82A42F720002B2BB3 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordHTTP;
+		};
+		D935F9E12A42F78D002B2BB3 /* DiscordModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D935F9C82A42F720002B2BB3 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordModels;
+		};
+		D935F9E32A42F796002B2BB3 /* DiscordUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D935F9C82A42F720002B2BB3 /* XCRemoteSwiftPackageReference "DiscordBM" */;
+			productName = DiscordUtilities;
+		};
+		D976AD642A3AE1210062FA60 /* SwiftLintPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = "plugin:SwiftLintPlugin";
+		};
+		D98748F02A443311000B5AE4 /* DiscordLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D98748EF2A443311000B5AE4 /* XCRemoteSwiftPackageReference "DiscordLogger" */;
+			productName = DiscordLogger;
+		};
+		D98748F22A44332B000B5AE4 /* DiscordLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D98748EF2A443311000B5AE4 /* XCRemoteSwiftPackageReference "DiscordLogger" */;
+			productName = DiscordLogger;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 324459F829C55C4600E2F584 /* Project object */;
+}
